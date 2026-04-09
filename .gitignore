@@ -21,3 +21,5 @@ blast_pred.tar.gz
 checkpoints_pretraining_v2.tar.gz
 matches_urls.txt
 cs-net-models/
+*.dem
+examples/test.dem
