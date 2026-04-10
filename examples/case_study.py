@@ -324,7 +324,7 @@ def main():
 
     print("Loading tokenizer...")
 
-    with open(os.path.join(args.alive_ckpt_dir, "tokenizer.yaml")) as f:
+    with open(os.path.join(args.alive_ckpt_dir, "tokenizer.yaml"), encoding='utf-8') as f:
         tokenizer_cfg = yaml.safe_load(f)
 
     tokenizer = TickTokenizer(tokenizer_cfg)
