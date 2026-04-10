@@ -1,0 +1,5 @@
+python -m data.process_demo -path "\pgl-cluj-napoca-2026-parivision-vs-vitality-bo5-AmtSttVoC1qI4LHDRIW4S-\parivision-vs-vitality-m3-inferno.dem" -interval 0.1 -out examples/PGL-vit-pv-inferno.json
+
+python -m examples.case_study   --json_path examples/PGL-vit-pv-inferno.json   --alive_ckpt_dir cs-net-models/alive   --kill_ckpt_dir cs-net-models/kill   --winrate_ckpt_dir cs-net-models/winrate   --duel_ckpt_dir cs-net-models/duel   --device cuda
+
+python -m examples.case_study_sequence --json_path examples/PGL-vit-pv-inferno.json --alive_ckpt_dir cs-net-models/alive --kill_ckpt_dir cs-net-models/kill --winrate_ckpt_dir cs-net-models/winrate --duel_ckpt_dir cs-net-models/duel --round_id 18 --start_sec 70 --end_sec 100 --output_path outputs/round3_20_35_pred.json --save_mode attach --tick_stride 1 --device cuda
